@@ -69,7 +69,7 @@ public class registerServlet extends HttpServlet {
          pst.setString(5,phoneNum);
          
          int rowCount = pst.executeUpdate();
-         dispatcher = request.getRequestDispatcher("register.html");
+         dispatcher = request.getRequestDispatcher("register.jsp");
          if (rowCount>0){
              request.setAttribute("status","success");
              

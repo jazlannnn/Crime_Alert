@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Sign Up Form by Colorlib</title>
+<title>Sign Up Form</title>
 
 <!-- Font Icon -->
 <link rel="stylesheet"
@@ -64,13 +64,13 @@
 							</div>
 							<div class="form-group form-button">
 								<input type="submit" name="signup" id="signup"
-									class="form-submit" value="Register" />
+									class="form-submit"  />
 							</div>
 						</form>
 					</div>
 					<div class="signup-image">
 						<figure>
-							<img src="images/signup-image.jpg" alt="sing up image">
+							<img src="images/signup-image.jpeg" alt="sing up image">
 						</figure>
 						<a href="login.jsp" class="signup-image-link">I am already
 							member</a>
