@@ -52,8 +52,15 @@ public class LoginServlet extends HttpServlet {
                   
          ResultSet rs = pst.executeQuery();
          if(rs.next()){
-             session.setAttribute("email", rs.getString("email"));
+             session.setAttribute("name", rs.getString("username"));
+             session.setAttribute("mail", rs.getString("email"));
+
              dispatcher = request.getRequestDispatcher("index.jsp");
+             // Set attribute to "success" when login is successful
+            request.setAttribute("status", "success");
+            
+            // Log or print a message to confirm that the status is set to success
+            System.out.println("Login successful. Status set to success.");
              
          }else{
              request.setAttribute("status", "failed");

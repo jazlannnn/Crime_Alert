@@ -12,9 +12,12 @@
 
 <!-- Main css -->
 <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
 
+<!-- SweetAlert CSS -->
+<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+
+<body>
+    <input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
 	<div class="main">
 
 		<!-- Sing in  Form -->
@@ -74,8 +77,26 @@
 	</div>
 
 	<!-- JS -->
+	<!-- jQuery -->
 	<script src="vendor/jquery/jquery.min.js"></script>
+	<!-- SweetAlert -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+	<!-- Your main.js script -->
 	<script src="js/main.js"></script>
+        
+       <script type="text/javascript">
+           console.log("Script is running");
+    var status = document.getElementById("status").value;
+    
+    if (status === "success") {
+        Swal.fire({
+            title: 'Congrats',
+            text: 'Account login Successfully',
+            icon: 'success',
+        });
+    }
+    
+    </script>
 </body>
 <!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

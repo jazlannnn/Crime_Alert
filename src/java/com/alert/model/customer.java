@@ -9,12 +9,30 @@ package com.alert.model;
  *
  * @author raimi
  */
-public class customer {
+public class customer implements java.io.Serializable{
+    private Long id;
     private String email;
     private String username;
     private String password;
     private String address;
     private String phoneNum;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public customer(Long id, String email, String username, String password, String address, String phoneNum) {
+        this.id = id;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+        this.address = address;
+        this.phoneNum = phoneNum;
+    }
 
      public String getEmail() {
         return email;

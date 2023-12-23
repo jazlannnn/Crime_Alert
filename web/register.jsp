@@ -12,6 +12,10 @@
 
 <!-- Main css -->
 <link rel="stylesheet" href="css/style.css">
+
+<!-- SweetAlert CSS -->
+<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -29,36 +33,36 @@
 							id="register-form">
 							<div class="form-group">
 								<label for="email"><i class="zmdi zmdi-email"></i></label> <input
-									type="email" name="email" id="email" placeholder="Your Email" />
+									type="email" name="email" id="email" placeholder="Your Email" required/>
 							</div>
 							<div class="form-group">
 								<label for="name"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
-									type="text" name="username" id="username" placeholder="Your UserName" />
+									type="text" name="username" id="username" placeholder="Your UserName" required/>
 							</div>
 						
 							<div class="form-group">
 								<label for="pass"><i class="zmdi zmdi-lock"></i></label> <input
-									type="password" name="password" id="password" placeholder="Password" />
+									type="password" name="password" id="password" placeholder="Password" required/>
 							</div>
 							<div class="form-group">
 								<label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
 								<input type="password" name="re_pass" id="re_pass"
-									placeholder="Repeat your password" />
+									placeholder="Repeat your password" required/>
 							</div>
 							<div class="form-group">
 								<label for="contact"><i class="zmdi zmdi-lock-outline"></i></label>
 								<input type="text" name="address" id="address"
-									placeholder="Address" />
+									placeholder="Address" required/>
 							</div>
 							<div class="form-group">
 								<label for="contact"><i class="zmdi zmdi-lock-outline"></i></label>
 								<input type="text" name="phoneNum" id="phoneNum"
-									placeholder="Phone Number" />
+									placeholder="Phone Number" required />
 							</div>
 							<div class="form-group">
 								<input type="checkbox" name="agree-term" id="agree-term"
-									class="agree-term" /> <label for="agree-term"
+									class="agree-term" required/> <label for="agree-term"
 									class="label-agree-term"><span><span></span></span>I
 									agree all statements in <a href="#" class="term-service">Terms
 										of service</a></label>
@@ -83,15 +87,21 @@
 
 	</div>
 	<!-- JS -->
+	<!-- jQuery -->
 	<script src="vendor/jquery/jquery.min.js"></script>
+	<!-- SweetAlert -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+	<!-- Your main.js script -->
 	<script src="js/main.js"></script>
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<link rel="stylesheet" href="alert/dist/sweetalert.css">
 
         <script type="text/javascript">
-            var status = getElementById("status").value;
+           var status = document.getElementById("status").value;
             if(status == "success"){
-                swal("Congrats","Account Created Successfull","success");
+                Swal.fire({
+                    title: 'Congrats',
+                    text: 'Account Created Successfully',
+                    icon: 'success',
+                  });
             }
            
           </script> 

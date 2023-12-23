@@ -1,7 +1,12 @@
 <%
-    if(session.getAttribute("email")==null){
+    if(session.getAttribute("name")==null){
         response.sendRedirect("login.jsp");
     }
+    
+    Object emailAttribute = session.getAttribute("mail");
+    System.out.println("Email attribute from session: " + emailAttribute);
+
+
 %> 
 
 
@@ -110,7 +115,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        <%= session.getAttribute("email") %>
+                        <%= session.getAttribute("name") %>
                     </div>
                 </nav>
             </div>
@@ -133,8 +138,9 @@
                                 <form>
                                         <div class="form-row">
                                           <div class="form-group col-md-6">
-                                            <label for="email">Email: <br><%= session.getAttribute("email") %> </label>
-                                            <input type="hidden" class="form-control" id="email"  value="<%= session.getAttribute("email") %>">
+                                            <label for="email">Email: <br><%= session.getAttribute("mail") %></label>
+<input type="hidden" class="form-control" id="email" value="<%= session.getAttribute("mail") %>">
+
                                           </div>
                                           <br> 
                                         </div>

@@ -1,7 +1,8 @@
 <%
-    if(session.getAttribute("email")==null){
+    if(session.getAttribute("name")==null){
         response.sendRedirect("login.jsp");
     }
+    
 %> 
 
 
@@ -110,7 +111,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        <%= session.getAttribute("email") %>
+                        <%= session.getAttribute("name") %>
                     </div>
                 </nav>
             </div>
