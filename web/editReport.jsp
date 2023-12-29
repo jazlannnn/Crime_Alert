@@ -1,3 +1,12 @@
+<%-- 
+    Document   : editReport
+    Created on : Dec 27, 2023, 12:38:30 AM
+    Author     : raimi
+--%>
+
+<%@page import="com.alert.model.ReportDAO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.alert.model.ReportBean"%>
 <%
     if(session.getAttribute("name")==null){
         response.sendRedirect("login.jsp");
@@ -5,10 +14,27 @@
     
     Object emailAttribute = session.getAttribute("mail");
     System.out.println("Email attribute from session: " + emailAttribute);
-    long userId = (Long) session.getAttribute("cid");
-    System.out.println("id attribute from session: " + userId);
+    long customerId = (Long) session.getAttribute("cid");
+    System.out.println("id attribute from session: " + customerId);
     
+    int reportId = Integer.parseInt(request.getParameter("reportId"));
     
+ Integer userId = (Integer) session.getAttribute("userId");//System.out.println("UserId retrieved from session: " + userId);
+ 
+ List<ReportBean> reports = ReportDAO.getAllReportsUser(userId);
+ 
+System.out.println("Report ID: " + reportId);
+System.out.println("Email from session: " + emailAttribute);
+System.out.println("Customer ID from session: " + customerId);
+System.out.println("Description from request: " + request.getParameter("description"));
+
+  ReportBean reportToEdit = null;
+    for (ReportBean report : reports) {
+        if (report.getReportId() == reportId) {
+            reportToEdit = report;
+            break;
+        }
+    }
 
 %> 
 
@@ -53,7 +79,8 @@
                         <div class="card">
                             <div class="card-body">
                               
-                                <form action="Report" method="POST" >
+                                <form action="UpdateReport" method="POST" >
+                                    <input type="hidden" name="reportId" value="<%= request.getParameter("reportId") %>">
                                         <div class="form-row">
                                           <div class="form-group col-md-6">
  
@@ -65,18 +92,17 @@
                                         </div>
                                         <div class="form-group"
                                           <label for="description">Issue</label>
-                                            <input type="text" class="form-control" id="description"  name="description"  style="vertical-align: top;  height: 300px" placeholder="">
+                                            <input type="text" class="form-control" id="description"  name="description"  style="vertical-align: top;  height: 300px" placeholder="" value="<%= reportToEdit.getDescription()  %>">
                                         </div>
                                           <br>
                                           
                                           <div class="form-group"
                                                 <label for="date">Date Crime:</label>
-                                                <input type="date" class="form-control" id="reportDate"  name="reportDate" placeholder="">
+                                                <input type="date" class="form-control" id="reportDate"  name="reportDate" placeholder="" value="<%= reportToEdit.getReportDate()%>"
                                            </div>
                                           <br>
                                           <input type="hidden" name="status" value="Not Done">
                                            <input type="hidden" class="form-control" id="userId" name="userId" value="<%= session.getAttribute("cid")%>">
-                                           
                                            
 <!--                                        <div class="form-row">
                                           <div class="form-group col-md-6">
@@ -119,3 +145,4 @@
         <script src="js/datatables-simple-demo.js"></script>
     </body>
 </html>
+

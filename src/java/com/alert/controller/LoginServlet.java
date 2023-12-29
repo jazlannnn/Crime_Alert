@@ -32,8 +32,10 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        
         String email =request.getParameter("email");
         String password = request.getParameter("password");
+     
         HttpSession session =request.getSession();
         RequestDispatcher dispatcher=null;
          
@@ -54,6 +56,7 @@ public class LoginServlet extends HttpServlet {
          if(rs.next()){
              session.setAttribute("name", rs.getString("username"));
              session.setAttribute("mail", rs.getString("email"));
+             session.setAttribute("cid", rs.getLong("id"));
 
              dispatcher = request.getRequestDispatcher("index.jsp");
              // Set attribute to "success" when login is successful
