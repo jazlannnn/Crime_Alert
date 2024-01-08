@@ -7,7 +7,7 @@
 
 
 <%
-    if(session.getAttribute("name")==null){
+    if(session.getAttribute("Adminname")==null){
         response.sendRedirect("adminLogin.jsp");
     }
     
