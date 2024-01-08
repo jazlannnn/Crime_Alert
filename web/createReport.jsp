@@ -23,7 +23,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <!-- Add other meta tags as needed -->
-        <title>Dashboard - SB Admin</title>
+        <title>Crimelert Create Report</title>
     </head>
     <body class="sb-nav-fixed">
         <!-- Include header -->
@@ -40,7 +40,7 @@
                 <main>
                  
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Report</h1>
+                        <h1 class="mt-4">Create Report</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">CRIME ALERT!!!!</li>
                         </ol>

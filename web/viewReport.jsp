@@ -4,12 +4,12 @@
     }
     
     
- Integer userId = (Integer) session.getAttribute("userId");//System.out.println("UserId retrieved from session: " + userId);
- 
- List<ReportBean> reports = ReportDAO.getAllReportsUser(userId);
- 
-Object generatedReportId = session.getAttribute("generatedReportId");
-System.out.println("report ID retrieved from session: " + generatedReportId);
+    Integer userId = (Integer) session.getAttribute("userId");//System.out.println("UserId retrieved from session: " + userId);
+
+    List<ReportBean> reports = ReportDAO.getAllReportsUser(userId);
+
+   Object generatedReportId = session.getAttribute("generatedReportId");
+   System.out.println("report ID retrieved from session: " + generatedReportId);
 
  
 //String reportIdParam = request.getParameter("reportId");
@@ -45,7 +45,7 @@ System.out.println("report ID retrieved from session: " + generatedReportId);
                 <main>
                  
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Report</h1>
+                        <h1 class="mt-4">View Report</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">CRIME ALERT!!!!</li>
                         </ol>
