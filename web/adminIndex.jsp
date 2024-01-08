@@ -32,7 +32,7 @@
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <!-- Include sidebar -->
-                <%@ include file="sidebar.jsp" %>
+                <%@ include file="adminSidebar.jsp" %>
             </div>
             
             <div id="layoutSidenav_content">

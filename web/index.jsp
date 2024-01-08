@@ -50,13 +50,13 @@
                         <div class="slider-frame">
                             <div class="slide-images">
                                 <div class="img-container">
-                                    <img src="assets/line.png">
+                                    <img src="assets/crime.jpg">
                                 </div>
                                 <div class="img-container">
-                                    <img src="assets/line.png">
+                                    <img src="assets/crime.jpg">
                                 </div>
                                 <div class="img-container">
-                                    <img src="assets/line.png">
+                                    <img src="assets/crime.jpg">
                                 </div>
                             </div>
                         </div>    

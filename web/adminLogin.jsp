@@ -31,7 +31,7 @@
 					</div>
 
 					<div class="signin-form">
-						<h2 class="form-title">Login</h2>
+						<h2 class="form-title">Admin Login</h2>
                                                 
 						<form method="POST" action="AdminLoginServlet" class="register-form" id="login-form">
 							<div class="form-group">
