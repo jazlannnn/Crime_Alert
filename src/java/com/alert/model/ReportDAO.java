@@ -89,6 +89,35 @@ public class ReportDAO {
         
         return reports;
     }
+    public static List<ReportBean> getAllReports() {
+        List<ReportBean> reports = new ArrayList<>();
+        
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+            String sql = "SELECT reportId ,email, description, reportDate, status FROM REPORT";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+               
+
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    
+                    while (resultSet.next()) {
+                        ReportBean report = new ReportBean();
+                        report.setReportId(resultSet.getInt("reportId"));
+                        report.setEmail(resultSet.getString("email"));
+                        report.setDescription(resultSet.getString("description"));
+                        report.setReportDate(resultSet.getDate("reportDate"));
+                        report.setStatus(resultSet.getString("status"));
+                        
+
+                        reports.add(report);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        return reports;
+    }
     public static ReportBean getReportById(int reportId) {
     ReportBean report = null;
     
@@ -132,22 +161,114 @@ public class ReportDAO {
         e.printStackTrace();
     }
 }
+    public static void updateReportStatus(ReportBean report) {
+    try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+        String sql = "UPDATE report SET status = ? WHERE reportId = ?";
+        
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            // Set status at index 1
+            preparedStatement.setString(1, report.getStatus());
+            // Set reportId at index 2
+            preparedStatement.setInt(2, report.getReportId());
+
+            preparedStatement.executeUpdate();
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
+
     
-    public static void deleteReport(int reportId) throws SQLException {
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+   public static void deleteReport(int reportId) throws SQLException {
+    try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
         String sql = "DELETE FROM report WHERE reportId = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             preparedStatement.setInt(1, reportId);
+                        
+
             preparedStatement.executeUpdate();
-        } finally {
-            
         }
+    } catch (SQLException e) {
+        e.printStackTrace();
+        throw e; // rethrow the exception after logging
     }
-
-   
-
-    
 }
 
+
+    
+    public static int CountDoneReport(){
+      
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        
+        int count = 0;
+
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+        String sql = "SELECT COUNT(*) FROM REPORT WHERE status = 'Done'";
+
+           
+            preparedStatement = connection.prepareStatement(sql);
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                count = resultSet.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Handle the exception as needed
+        } 
+
+        return count;
+    }
+    
+    public static int CountNotDoneReport(){
+      
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        
+        int count = 0;
+
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+        String sql = "SELECT COUNT(*) FROM REPORT WHERE status = 'Not Done'";
+
+           
+            preparedStatement = connection.prepareStatement(sql);
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                count = resultSet.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Handle the exception as needed
+        } 
+
+        return count;
+    }
+    
+    public static int CountInProgressReport(){
+      
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        
+        int count = 0;
+
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+        String sql = "SELECT COUNT(*) FROM REPORT WHERE status = 'InProgress'";
+
+           
+            preparedStatement = connection.prepareStatement(sql);
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                count = resultSet.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Handle the exception as needed
+        } 
+
+        return count;
+    }
+    
+    
+    
     
 }

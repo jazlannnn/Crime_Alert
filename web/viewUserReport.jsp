@@ -1,17 +1,18 @@
 <%
-    if(session.getAttribute("name")==null){
+    if(session.getAttribute("Adminname")==null){
         response.sendRedirect("login.jsp");
     }
+     String reportIdParam = request.getParameter("reportId");
+System.out.println("report ID retrieved from request parameter: " + reportIdParam);
     
-    int i=1;
     Integer userId = (Integer) session.getAttribute("userId");//System.out.println("UserId retrieved from session: " + userId);
 
-    List<ReportBean> reports = ReportDAO.getAllReportsUser(userId);
+    List<ReportBean> reports = ReportDAO.getAllReports();
 
    Object generatedReportId = session.getAttribute("generatedReportId");
    System.out.println("report ID retrieved from session: " + generatedReportId);
-
- 
+   
+   int i=1;
 //String reportIdParam = request.getParameter("reportId");
 //System.out.println(reportIdParam);
 %> 
@@ -37,7 +38,7 @@
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <!-- Include sidebar -->
-                <%@ include file="sidebar.jsp" %>
+                <%@ include file="adminSidebar.jsp" %>
             </div>
            
             
@@ -79,16 +80,19 @@
                                             <td><%= report.getReportDate() %></td>
             <td>
         <button type="button" class="btn btn-primary" onclick="confirmEdit('<%= report.getReportId() %>')">Edit</button>
+<!--                <a href="adminEditReport.jsp?reportId= <%= report.getReportId() %>">Edit</a>-->
+                
             </td>
             
             <td>
             <button type="button" class="btn btn-danger" onclick="confirmDelete('<%= report.getReportId() %>')">Delete</button>
+
             </td>
                                 <script>
                                     function confirmEdit(reportId) {
                                         var confirmation = confirm("Are you sure you want to edit this report?");
                                         if (confirmation) {
-                                            window.location.href = 'editReport.jsp?reportId=' + reportId;
+                                            window.location.href = 'adminEditReport.jsp?reportId=' + reportId;
                                         }
                                     }
                                     function confirmDelete(reportId) {

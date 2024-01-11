@@ -33,6 +33,9 @@ public class customer implements java.io.Serializable{
         this.address = address;
         this.phoneNum = phoneNum;
     }
+    public customer(){
+        
+    }
 
      public String getEmail() {
         return email;

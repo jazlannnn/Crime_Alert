@@ -65,8 +65,12 @@
                                         </div>
                                         <div class="form-group"
                                           <label for="description">Issue</label>
-                                            <input type="text" class="form-control" id="description"  name="description"  style="vertical-align: top;  height: 300px" placeholder="">
+                                            <textarea class="form-control" class="form-control" id="description"  name="description"  style="vertical-align: top;  height: 300px" placeholder=""></textarea>
                                         </div>
+                                    
+                                    
+                                    
+                        
                                           <br>
                                           
                                           <div class="form-group"

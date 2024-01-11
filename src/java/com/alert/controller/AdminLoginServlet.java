@@ -55,8 +55,8 @@ public class AdminLoginServlet extends HttpServlet {
          ResultSet rs = pst.executeQuery();
          if(rs.next()){
              session.setAttribute("Adminname", rs.getString("username"));
-             session.setAttribute("mail", rs.getString("email"));
-             session.setAttribute("cid", rs.getLong("id"));
+             session.setAttribute("Amail", rs.getString("email"));
+             session.setAttribute("Aid", rs.getLong("id"));
              dispatcher = request.getRequestDispatcher("adminIndex.jsp");
              // Set attribute to "success" when login is successful
             request.setAttribute("status", "success");

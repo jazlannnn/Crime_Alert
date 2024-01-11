@@ -57,6 +57,9 @@ public class LoginServlet extends HttpServlet {
              session.setAttribute("name", rs.getString("username"));
              session.setAttribute("mail", rs.getString("email"));
              session.setAttribute("cid", rs.getLong("id"));
+             session.setAttribute("password", rs.getString("password"));
+            session.setAttribute("address", rs.getString("address"));
+            session.setAttribute("phoneNum", rs.getString("phoneNum"));
 
              dispatcher = request.getRequestDispatcher("index.jsp");
              // Set attribute to "success" when login is successful

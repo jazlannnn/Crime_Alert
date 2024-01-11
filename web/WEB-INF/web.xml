@@ -36,6 +36,14 @@
         <servlet-name>AdminLoginServlet</servlet-name>
         <servlet-class>com.alert.controller.AdminLoginServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UpdateReportStatusServlet</servlet-name>
+        <servlet-class>com.alert.controller.UpdateReportStatusServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>customerSettingServlet</servlet-name>
+        <servlet-class>com.alert.controller.customerSettingServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -71,6 +79,14 @@
     <servlet-mapping>
         <servlet-name>AdminLoginServlet</servlet-name>
         <url-pattern>/AdminLoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateReportStatusServlet</servlet-name>
+        <url-pattern>/UpdateReportStatus</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>customerSettingServlet</servlet-name>
+        <url-pattern>/customerSetting</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

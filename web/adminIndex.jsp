@@ -6,11 +6,15 @@
 
 
 
+<%@page import="com.alert.model.ReportDAO"%>
 <%
     if(session.getAttribute("Adminname")==null){
         response.sendRedirect("adminLogin.jsp");
     }
     
+   int CountDone = ReportDAO.CountDoneReport();
+   int CountNotDoneReport = ReportDAO.CountNotDoneReport();
+   int CountInProgressReport = ReportDAO.CountInProgressReport();
 
 %>
 
@@ -48,32 +52,32 @@
             </div>
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Primary Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
+                        <div class="card bg-success text-white mb-4">
+                            <div class="card-body">Report Done: <%= CountDone %></div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                <a class="small text-white stretched-link" href="viewUserReport.jsp">View Details</a>
+                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
+                        </div>
+                    </div>
+                             <div class="col-xl-3 col-md-6">
+                        <div class="card bg-warning text-white mb-4">
+                            <div class="card-body">Report Not Done: <%= CountNotDoneReport %></div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                <a class="small text-white stretched-link" href="viewUserReport.jsp">View Details</a>
+                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Warning Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
+                        <div class="card bg-primary text-white mb-4">
+                            <div class="card-body">Report Inprogress: <%= CountInProgressReport %></div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                <a class="small text-white stretched-link" href="viewUserReport.jsp">View Details</a>
+                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Success Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
+                        </div>
+                    </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-danger text-white mb-4">
                                     <div class="card-body">Danger Card</div>
