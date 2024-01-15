@@ -68,7 +68,7 @@ public class ReportServlet extends HttpServlet {
     // Use generatedReportId as needed
     System.out.println("Generated Report ID: " + generatedReportId);
 
-    // You may choose to store the reportId in session or pass it to other components
+    //  store the reportId in session or pass it to other components
     session.setAttribute("generatedReportId", generatedReportId);
     session.setAttribute("reportId", report.getReportId());
 

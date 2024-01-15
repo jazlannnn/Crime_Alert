@@ -18,6 +18,7 @@
 
 <body>
     <input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
+    <input type="hidden" class="form-control" id="userId" name="userId" value="<%= session.getAttribute("cid")%>">
 	<div class="main">
 
 		<!-- Sing in  Form -->

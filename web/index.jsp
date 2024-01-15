@@ -12,7 +12,9 @@
     }
     
 
+
 %>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +30,7 @@
     <body class="sb-nav-fixed">
         <!-- Include header -->
         <%@ include file="header.jsp" %>
-
+        
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <!-- Include sidebar -->
@@ -40,6 +42,7 @@
                  
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Welcome to Crime Alert System</h1>
+                        <%= session.getAttribute("cid")%>
                         <p class="lead">Empowering Communities, Enhancing Safety</p>
                             <div>
                                 <img src="assets/line.png" class="img-fluid" alt="Responsive image">

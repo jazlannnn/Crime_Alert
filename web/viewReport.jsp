@@ -1,24 +1,15 @@
 <%
-    if(session.getAttribute("name")==null){
-        response.sendRedirect("login.jsp");
-    }
+   
     
     int i=1;
-    Integer userId = (Integer) session.getAttribute("userId");//System.out.println("UserId retrieved from session: " + userId);
 
-    List<ReportBean> reports = ReportDAO.getAllReportsUser(userId);
-
-   Object generatedReportId = session.getAttribute("generatedReportId");
-   System.out.println("report ID retrieved from session: " + generatedReportId);
-
- 
-//String reportIdParam = request.getParameter("reportId");
-//System.out.println(reportIdParam);
 %> 
 
 <%@ page import="java.util.List" %>
 <%@ page import="com.alert.model.ReportBean" %>
 <%@ page import="com.alert.model.ReportDAO" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -39,6 +30,8 @@
                 <!-- Include sidebar -->
                 <%@ include file="sidebar.jsp" %>
             </div>
+            
+            
            
             
             <div id="layoutSidenav_content">
@@ -70,8 +63,15 @@
                                        
                                     </tr>
                                 </thead>
+                                <%
+        // Retrieve the list of reports from the request attribute
+        List<ReportBean> reports = (List<ReportBean>) request.getAttribute("reports");
+
+        if (reports != null && !reports.isEmpty()) {
+            for (ReportBean report : reports) {
+    %>
                                 <tbody>
-                                    <% for (ReportBean report : reports) { %>
+                                   
                                         <tr>
                                             <td><%= i++ %></td>
                                             <td><%= report.getEmail() %></td>
@@ -109,6 +109,15 @@
                                     <% } %>
                                 </tbody>
                             </table>
+                                <%
+            }
+         else {
+    %>
+            <p>No reports found for the user.</p>
+    <%
+        }
+    %>
+
                         </div>
                     </div>
                         

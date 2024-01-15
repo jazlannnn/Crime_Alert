@@ -44,6 +44,10 @@
         <servlet-name>customerSettingServlet</servlet-name>
         <servlet-class>com.alert.controller.customerSettingServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewReportServlet</servlet-name>
+        <servlet-class>com.alert.controller.ViewReportServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -87,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>customerSettingServlet</servlet-name>
         <url-pattern>/customerSetting</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewReportServlet</servlet-name>
+        <url-pattern>/ViewReport</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -30,7 +30,7 @@ public class DeleteReportServlet extends HttpServlet {
             ReportDAO.deleteReport(reportId);
 
             // Redirect back to the viewReport or any other appropriate page
-            response.sendRedirect("viewReport.jsp");
+            response.sendRedirect("ViewReport");
         } catch (Exception e) {
             // Handle exceptions (e.g., log or show an error page)
             e.printStackTrace();

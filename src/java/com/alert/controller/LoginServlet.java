@@ -61,6 +61,8 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("address", rs.getString("address"));
             session.setAttribute("phoneNum", rs.getString("phoneNum"));
 
+
+
              dispatcher = request.getRequestDispatcher("index.jsp");
              // Set attribute to "success" when login is successful
             request.setAttribute("status", "success");
