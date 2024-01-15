@@ -29,9 +29,9 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                  View User  
                             </a>
-                             <a class="nav-link" href="index.html">
+                             <a class="nav-link" href="viewAdminDetail.jsp">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                View 
+                                Admin Detail 
                             </a>
                         </div>
                     </div>

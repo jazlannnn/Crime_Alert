@@ -30,7 +30,7 @@ ReportBean report = ReportDAO.getReportById(reportId);
 </head>
 <body class="sb-nav-fixed">
     <!-- Include header -->
-    <%@ include file="header.jsp" %>
+    <%@ include file="adminHeader.jsp" %>
 
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">

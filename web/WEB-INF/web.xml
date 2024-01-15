@@ -48,6 +48,10 @@
         <servlet-name>ViewReportServlet</servlet-name>
         <servlet-class>com.alert.controller.ViewReportServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>adminSettingServlet</servlet-name>
+        <servlet-class>com.alert.controller.adminSettingServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -95,6 +99,10 @@
     <servlet-mapping>
         <servlet-name>ViewReportServlet</servlet-name>
         <url-pattern>/ViewReport</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>adminSettingServlet</servlet-name>
+        <url-pattern>/adminSetting</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
