@@ -36,7 +36,7 @@ public class EditReportServlet extends HttpServlet {
         ReportBean report = reportDAO.getReportById(reportId);
 
         // Set the report as an attribute in the request
-        request.setAttribute("reports", report);  // Convert the ReportBean into a List
+        request.setAttribute("reports", report);  
 
         // Forward the request to the editReport.jsp page
         request.getRequestDispatcher("/editReport.jsp").forward(request, response);

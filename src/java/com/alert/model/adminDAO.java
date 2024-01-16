@@ -8,7 +8,10 @@ package com.alert.model;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -48,5 +51,35 @@ public class adminDAO {
             e.printStackTrace();
             return false;
         }
+    }
+     
+     public static List<customer> getAllUser() {
+        List<customer> users = new ArrayList<>();
+        
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+            String sql = "SELECT * FROM CUSTOMER";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+               
+
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    
+                    while (resultSet.next()) {
+                        customer user = new customer();
+                        user.setId(resultSet.getLong("id"));
+                        user.setEmail(resultSet.getString("email"));
+                        user.setUsername(resultSet.getString("username"));
+                        user.setPassword(resultSet.getString("password"));
+                        user.setAddress(resultSet.getString("address"));
+                        user.setPhoneNum(resultSet.getString("phoneNum"));
+                        
+                        users.add(user);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        return users;
     }
 }
