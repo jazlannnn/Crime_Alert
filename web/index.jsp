@@ -25,7 +25,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <!-- Add other meta tags as needed -->
-        <title>Home Page Crimelert</title>
+        <title>Crimelert Home Page </title>
     </head>
     <body class="sb-nav-fixed">
         <!-- Include header -->

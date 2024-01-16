@@ -42,10 +42,10 @@ public class ViewReportServlet extends HttpServlet {
 
                 request.getRequestDispatcher("/viewReport.jsp").forward(request, response);
             } else {
-                response.getWriter().println("No reports found for the user.");
+                request.getRequestDispatcher("/viewReport.jsp").forward(request, response);
             }
         } else {
-            response.getWriter().println("Invalid or missing session attribute (userId).");
+             request.getRequestDispatcher("/viewUserReport.jsp").forward(request, response);
         }
     }
 }

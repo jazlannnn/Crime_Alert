@@ -29,7 +29,7 @@ System.out.println("report ID retrieved from request parameter: " + reportIdPara
         <meta name="description" content="" />
         <meta name="author" content="" />
         <!-- Add other meta tags as needed -->
-        <title>Dashboard - SB Admin</title>
+        <title>Crimelert View User Report</title>
     </head>
     <body class="sb-nav-fixed">
         <!-- Include header -->
@@ -46,7 +46,7 @@ System.out.println("report ID retrieved from request parameter: " + reportIdPara
                 <main>
                  
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">View Report</h1>
+                        <h1 class="mt-4">View User Report</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">CRIME ALERT!!!!</li>
                         </ol>

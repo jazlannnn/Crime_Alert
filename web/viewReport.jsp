@@ -19,7 +19,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <!-- Add other meta tags as needed -->
-        <title>Dashboard - SB Admin</title>
+        <title>Crimelert View Report</title>
     </head>
     <body class="sb-nav-fixed">
         <!-- Include header -->
@@ -113,7 +113,11 @@
             }
          else {
     %>
-            <p>No reports found for the user.</p>
+                        <tr>
+                            <td colspan="8">
+                                <p>No reports found for the user.</p>
+                            </td>
+                        </tr>
     <%
         }
     %>

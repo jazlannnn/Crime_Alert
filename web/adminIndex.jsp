@@ -27,7 +27,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <!-- Add other meta tags as needed -->
-        <title>Dashboard - SB Admin</title>
+        <title>Crimelert Admin Dashboard</title>
     </head>
     <body class="sb-nav-fixed">
         <!-- Include header -->

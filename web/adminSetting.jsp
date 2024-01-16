@@ -26,7 +26,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <!-- Add other meta tags as needed -->
-        <title>Admin Setting - SB Admin</title>
+        <title>Crimelert Admin Setting</title>
     </head>
     <body class="sb-nav-fixed">
         <!-- Include header -->

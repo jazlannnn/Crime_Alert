@@ -22,7 +22,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <!-- Add other meta tags as needed -->
-        <title>Admin Detail </title>
+        <title>Crimelert Admin Detail </title>
     </head>
     <body class="sb-nav-fixed">
         <!-- Include header -->
