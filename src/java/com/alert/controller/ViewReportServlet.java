@@ -38,17 +38,13 @@ public class ViewReportServlet extends HttpServlet {
             List<ReportBean> reports = ReportDAO.getAllReportsUser(userId);
 //            response.getWriter().println(reports);
             if (!reports.isEmpty()) {
-                // Set the list of reports as an attribute in the request
                 request.setAttribute("reports", reports);
 
-                // Forward the request to the JSP page for displaying the reports
                 request.getRequestDispatcher("/viewReport.jsp").forward(request, response);
             } else {
-                // Handle the case where no reports are found for the user
                 response.getWriter().println("No reports found for the user.");
             }
         } else {
-            // Handle the case where the "userId" session attribute is not present
             response.getWriter().println("Invalid or missing session attribute (userId).");
         }
     }

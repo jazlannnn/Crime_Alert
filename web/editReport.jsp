@@ -12,29 +12,22 @@
         response.sendRedirect("login.jsp");
     }
     
-    Object emailAttribute = session.getAttribute("mail");
-    System.out.println("Email attribute from session: " + emailAttribute);
-    long customerId = (Long) session.getAttribute("cid");
-    System.out.println("id attribute from session: " + customerId);
-    
-    int reportId = Integer.parseInt(request.getParameter("reportId"));
-    
- Integer userId = (Integer) session.getAttribute("userId");//System.out.println("UserId retrieved from session: " + userId);
- 
- List<ReportBean> reports = ReportDAO.getAllReportsUser(userId);
- 
-System.out.println("Report ID: " + reportId);
-System.out.println("Email from session: " + emailAttribute);
-System.out.println("Customer ID from session: " + customerId);
-System.out.println("Description from request: " + request.getParameter("description"));
-
-  ReportBean reportToEdit = null;
-    for (ReportBean report : reports) {
-        if (report.getReportId() == reportId) {
-            reportToEdit = report;
-            break;
-        }
-    }
+//    Object emailAttribute = session.getAttribute("mail");
+//    System.out.println("Email attribute from session: " + emailAttribute);
+//    long customerId = (Long) session.getAttribute("cid");
+//    System.out.println("id attribute from session: " + customerId);
+//    
+//    int reportId = Integer.parseInt(request.getParameter("reportId"));
+//    
+// Integer userId = (Integer) session.getAttribute("userId");//System.out.println("UserId retrieved from session: " + userId);
+// 
+// List<ReportBean> reports = ReportDAO.getAllReportsUser(userId);
+// 
+//System.out.println("Report ID: " + reportId);
+//System.out.println("Email from session: " + emailAttribute);
+//System.out.println("Customer ID from session: " + customerId);
+//System.out.println("Description from request: " + request.getParameter("description"));
+ReportBean reportToEdit = (ReportBean) request.getAttribute("reports");
 
 %> 
 

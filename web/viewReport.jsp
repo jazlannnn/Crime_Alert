@@ -64,12 +64,12 @@
                                     </tr>
                                 </thead>
                                 <%
-        // Retrieve the list of reports from the request attribute
-        List<ReportBean> reports = (List<ReportBean>) request.getAttribute("reports");
 
-        if (reports != null && !reports.isEmpty()) {
-            for (ReportBean report : reports) {
-    %>
+                                List<ReportBean> reports = (List<ReportBean>) request.getAttribute("reports");
+
+                                if (reports != null && !reports.isEmpty()) {
+                                    for (ReportBean report : reports) {
+                                %>
                                 <tbody>
                                    
                                         <tr>
@@ -88,7 +88,7 @@
                                     function confirmEdit(reportId) {
                                         var confirmation = confirm("Are you sure you want to edit this report?");
                                         if (confirmation) {
-                                            window.location.href = 'editReport.jsp?reportId=' + reportId;
+                                            window.location.href = 'EditReport?reportId=' + reportId;
                                         }
                                     }
                                     function confirmDelete(reportId) {

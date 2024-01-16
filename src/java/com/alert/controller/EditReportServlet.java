@@ -28,16 +28,17 @@ import javax.servlet.http.HttpSession;
 public class EditReportServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int reportId = Integer.parseInt(request.getParameter("reportId"));
+        // Assuming "cid" is a Long, not an int
+    int reportId = Integer.parseInt(request.getParameter("reportId"));
 
-        // Retrieve the reports for the specified user
+        // Retrieve the report details using ReportDAO
         ReportDAO reportDAO = new ReportDAO();
-         ReportBean reports = reportDAO.getReportById(reportId);
+        ReportBean report = reportDAO.getReportById(reportId);
 
-        // Store the reports in the request attribute
-        request.setAttribute("reports", reports);
+        // Set the report as an attribute in the request
+        request.setAttribute("reports", report);  // Convert the ReportBean into a List
 
-        // Forward the request to the JSP page
-        request.getRequestDispatcher("/viewReport.jsp").forward(request, response);
+        // Forward the request to the editReport.jsp page
+        request.getRequestDispatcher("/editReport.jsp").forward(request, response);
     }
-    }     
+}
