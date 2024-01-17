@@ -27,10 +27,10 @@ public class DeleteReportServlet extends HttpServlet {
             int reportId = Integer.parseInt(request.getParameter("reportId"));
 
             // Call deleteReport method from ReportDAO
-            ReportDAO.deleteReport(reportId);
+            ReportDAO.deleteAndInsertReport(reportId);
 
             // Redirect back to the viewReport or any other appropriate page
-            response.sendRedirect("ViewReport");
+            response.sendRedirect("AdminSuccess.jsp");
         } catch (Exception e) {
             // Handle exceptions (e.g., log or show an error page)
             e.printStackTrace();

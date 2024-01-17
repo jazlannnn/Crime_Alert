@@ -182,14 +182,29 @@ public class ReportDAO {
 }
 
     
-   public static void deleteReport(int reportId) throws SQLException {
-    try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
-        String sql = "DELETE FROM report WHERE reportId = ?";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            preparedStatement.setInt(1, reportId);
-                        
+   public static void deleteAndInsertReport(int reportId) throws SQLException {
+   try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+        // Step 1: Retrieve the report details before deleting
+        ReportBean deletedReport = getReportById(reportId);
 
-            preparedStatement.executeUpdate();
+        // Step 2: Insert the report details into OlderReport
+        String insertOlderReportSql = "INSERT INTO older_report (email, description, reportDate, status, userId) VALUES (?, ?, ?, ?, ?)";
+        try (PreparedStatement insertStatement = connection.prepareStatement(insertOlderReportSql)) {
+            insertStatement.setString(1, deletedReport.getEmail());
+            insertStatement.setString(2, deletedReport.getDescription());
+            insertStatement.setDate(3, deletedReport.getReportDate());
+            insertStatement.setString(4, deletedReport.getStatus());
+            insertStatement.setInt(5, deletedReport.getUserId());
+
+            insertStatement.executeUpdate();
+        }
+
+        // Step 3: Delete the record from Report
+        String deleteReportSql = "DELETE FROM report WHERE reportId = ?";
+        try (PreparedStatement deleteStatement = connection.prepareStatement(deleteReportSql)) {
+            deleteStatement.setInt(1, reportId);
+
+            deleteStatement.executeUpdate();
         }
     } catch (SQLException e) {
         e.printStackTrace();
@@ -294,10 +309,36 @@ public class ReportDAO {
 
         return count;
     }
-    
-    
-    
-    
+     
+  public static List<ReportBean> getAllOlderReport() {
+        List<ReportBean> reports = new ArrayList<>();
+        
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+            String sql = "SELECT reportId ,email, description, reportDate, status FROM OLDER_REPORT";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+               
+
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    
+                    while (resultSet.next()) {
+                        ReportBean report = new ReportBean();
+                        report.setReportId(resultSet.getInt("reportId"));
+                        report.setEmail(resultSet.getString("email"));
+                        report.setDescription(resultSet.getString("description"));
+                        report.setReportDate(resultSet.getDate("reportDate"));
+                        report.setStatus(resultSet.getString("status"));
+                        
+
+                        reports.add(report);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        return reports;
+    }     
     
 }
     

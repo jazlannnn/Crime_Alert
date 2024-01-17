@@ -25,6 +25,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 View User Report
                             </a>
+                            <a class="nav-link" href="OlderReport">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                View Older Report
+                            </a>
                              <a class="nav-link" href="ViewUser">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                  View User  
