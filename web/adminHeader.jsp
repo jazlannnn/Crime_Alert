@@ -20,7 +20,9 @@
     <!-- Your navigation bar content goes here -->
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
        <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">Crimelert</a>
+             <a class="navbar-brand ps-3" href="adminIndex.jsp"">
+                <img src="assets/CRIMELERT.png" alt="Crimelert Logo" width="80" height="80" style= " margin-left:50px; margin-top:20px;  " class="d-inline-block align-top">
+            </a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->

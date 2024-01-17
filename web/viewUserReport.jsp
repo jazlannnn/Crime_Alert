@@ -96,7 +96,7 @@ System.out.println("report ID retrieved from request parameter: " + reportIdPara
                                         }
                                     }
                                     function confirmDelete(reportId) {
-                                        var confirmation = confirm("Are you sure you want to delete this report?");
+                                        var confirmation = confirm("Are you sure you want to delete this report? Make sure the status report is done !!");
                                         if (confirmation) {
                                             window.location.href = 'DeleteReport?reportId=' + reportId;
                                         }
