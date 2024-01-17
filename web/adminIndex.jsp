@@ -12,16 +12,15 @@
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
 <%
-    if(session.getAttribute("Adminname")==null){
+    if (session.getAttribute("Adminname") == null) {
         response.sendRedirect("adminLogin.jsp");
     }
-    
-   int CountDone = ReportDAO.CountDoneReport();
-   int CountNotDoneReport = ReportDAO.CountNotDoneReport();
-   int CountInProgressReport = ReportDAO.CountInProgressReport();
-   int CountAllUser = ReportDAO.CountAllUser();
-    
-    
+
+    int CountDone = ReportDAO.CountDoneReport();
+    int CountNotDoneReport = ReportDAO.CountNotDoneReport();
+    int CountInProgressReport = ReportDAO.CountInProgressReport();
+    int CountAllUser = ReportDAO.CountAllUser();
+
 
 %>
 
@@ -45,49 +44,54 @@
                 <!-- Include sidebar -->
                 <%@ include file="adminSidebar.jsp" %>
             </div>
-            
+
             <div id="layoutSidenav_content">
                 <main>
-                 
+
+                    <!-- ... Your existing code ... -->
+
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Dashboard</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">CRIME ALERT!!!!</li>
                         </ol>
-                            <div>
-           <img src="assets/line.png" class="img-fluid" alt="Responsive image">
-            </div>
-                        <div class="row">
+
+                        <div>
+                            <img src="assets/line.png" class="img-fluid" alt="Responsive image">
+                        </div>
+
+                        <!-- New row for cards -->
+                        <div class="row mt-4">
                             <div class="col-xl-3 col-md-6">
-                        <div class="card bg-success text-white mb-4">
-                            <div class="card-body">Report Done: <%= CountDone %></div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="viewUserReport.jsp">View Details</a>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Report Done: <%= CountDone%></div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="viewUserReport.jsp">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                             <div class="col-xl-3 col-md-6">
-                        <div class="card bg-warning text-white mb-4">
-                            <div class="card-body">Report Not Done: <%= CountNotDoneReport %></div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="viewUserReport.jsp">View Details</a>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
                             <div class="col-xl-3 col-md-6">
-                        <div class="card bg-primary text-white mb-4">
-                            <div class="card-body">Report Inprogress: <%= CountInProgressReport %></div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="viewUserReport.jsp">View Details</a>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Report Not Done: <%= CountNotDoneReport%></div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="viewUserReport.jsp">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Report Inprogress: <%= CountInProgressReport%></div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="viewUserReport.jsp">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-info text-white mb-4">
-                                    <div class="card-body">Total User: <%= CountAllUser %></div>
+                                    <div class="card-body">Total User: <%= CountAllUser%></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <a class="small text-white stretched-link" href="ViewUser">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -95,20 +99,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-bar me-1"></i>
-                                        Bar Chart Example
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15936.146753880605!2d101.49071259635495!3d3.084883350503627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4d80707fe6bf%3A0xcb1a37071040c156!2sShah%20Alam%20District%20Police%20Headquarters!5e0!3m2!1sen!2smy!4v1705514858141!5m2!1sen!2smy" 
+                                                width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                     </div>
-                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
+
+                    <!-- ... Your existing code ... -->
+
                 </main>
                 <!-- Include footer -->
                 <%@ include file="footer.jsp" %>

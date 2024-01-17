@@ -1,5 +1,7 @@
 <%
-   
+    if(session.getAttribute("Adminname")==null){
+        response.sendRedirect("login.jsp");
+    }
     
     int i=1;
 
