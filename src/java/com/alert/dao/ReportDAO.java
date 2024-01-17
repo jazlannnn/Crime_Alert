@@ -3,13 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.alert.model;
+package com.alert.dao;
 
+import com.alert.model.ReportBean;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -268,7 +271,34 @@ public class ReportDAO {
         return count;
     }
     
+     public static int CountAllUser(){
+      
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        
+        int count = 0;
+
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+        String sql = "SELECT COUNT(*) FROM CUSTOMER";
+
+           
+            preparedStatement = connection.prepareStatement(sql);
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                count = resultSet.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Handle the exception as needed
+        } 
+
+        return count;
+    }
+    
+    
     
     
     
 }
+    
+    

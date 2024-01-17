@@ -6,7 +6,11 @@
 
 
 
-<%@page import="com.alert.model.ReportDAO"%>
+<%@page import="com.alert.dao.ReportDAO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
 <%
     if(session.getAttribute("Adminname")==null){
         response.sendRedirect("adminLogin.jsp");
@@ -15,6 +19,9 @@
    int CountDone = ReportDAO.CountDoneReport();
    int CountNotDoneReport = ReportDAO.CountNotDoneReport();
    int CountInProgressReport = ReportDAO.CountInProgressReport();
+   int CountAllUser = ReportDAO.CountAllUser();
+    
+    
 
 %>
 
@@ -79,25 +86,17 @@
                         </div>
                     </div>
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Danger Card</div>
+                                <div class="card bg-info text-white mb-4">
+                                    <div class="card-body">Total User: <%= CountAllUser %></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="ViewUser">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-area me-1"></i>
-                                        Area Chart Example
-                                    </div>
-                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div>
+                            
                             <div class="col-xl-6">
                                 <div class="card mb-4">
                                     <div class="card-header">

@@ -6,7 +6,7 @@
 package com.alert.controller;
 
 
-import com.alert.model.adminDAO;
+import com.alert.dao.adminDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;

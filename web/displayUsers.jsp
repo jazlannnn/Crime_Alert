@@ -14,7 +14,7 @@
 
 <%@ page import="java.util.List" %>
 <%@ page import="com.alert.model.ReportBean" %>
-<%@ page import="com.alert.model.ReportDAO" %>
+<%@ page import="com.alert.dao.ReportDAO" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>

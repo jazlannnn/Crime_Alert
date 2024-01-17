@@ -19,7 +19,7 @@ System.out.println("report ID retrieved from request parameter: " + reportIdPara
 
 <%@ page import="java.util.List" %>
 <%@ page import="com.alert.model.ReportBean" %>
-<%@ page import="com.alert.model.ReportDAO" %>
+<%@ page import="com.alert.dao.ReportDAO" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>

@@ -6,7 +6,7 @@
 package com.alert.controller;
 
 import com.alert.model.customer;
-import com.alert.model.customerDAO;
+import com.alert.dao.customerDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;

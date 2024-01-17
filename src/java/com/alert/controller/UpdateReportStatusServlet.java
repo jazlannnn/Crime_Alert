@@ -6,7 +6,7 @@
 package com.alert.controller;
 
 import com.alert.model.ReportBean;
-import com.alert.model.ReportDAO;
+import com.alert.dao.ReportDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Date;

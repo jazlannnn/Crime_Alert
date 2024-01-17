@@ -1,6 +1,6 @@
+<%@page import="com.alert.dao.ReportDAO"%>
 <%@ page import="java.util.List" %>
 <%@ page import="com.alert.model.ReportBean" %>
-<%@ page import="com.alert.model.ReportDAO" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.io.*,java.util.*" %>

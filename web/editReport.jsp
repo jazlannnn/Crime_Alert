@@ -4,7 +4,7 @@
     Author     : raimi
 --%>
 
-<%@page import="com.alert.model.ReportDAO"%>
+<%@page import="com.alert.dao.ReportDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="com.alert.model.ReportBean"%>
 <%

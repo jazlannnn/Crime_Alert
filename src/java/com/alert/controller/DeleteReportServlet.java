@@ -5,7 +5,7 @@
  */
 package com.alert.controller;
 
-import com.alert.model.ReportDAO;
+import com.alert.dao.ReportDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
