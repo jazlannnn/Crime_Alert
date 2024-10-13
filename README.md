@@ -66,7 +66,7 @@ and broadened my perspective on how technology can be applied to enhance public 
 ![Screenshot 2024-10-13 225545](https://github.com/user-attachments/assets/de3f2c93-4cf6-44db-8c78-48453db8730e)
 - User Detail Page
 
-![Screenshot 2024-10-13 225557](https://github.com/user-attachments/assets/b6af0454-85c7-4caa-ae96-735c10ab2c98)
+![Screenshot 2024-10-13 232259](https://github.com/user-attachments/assets/23bc34bb-bb95-486b-8965-1f16d9172b95)
 - Admin Detail Page
 
 ![Uploading Screenshot 2024-10-13 225620.png…]()
@@ -79,5 +79,5 @@ and broadened my perspective on how technology can be applied to enhance public 
 - View Older Report Page
 
 ![Screenshot 2024-10-13 225657](https://github.com/user-attachments/assets/7a47495d-0b5d-4da9-81e0-ddc346b27803)
--View User Page
+- View User Page
 
