@@ -24,16 +24,16 @@ and broadened my perspective on how technology can be applied to enhance public 
 
 ## Screenshot of the Website
 
-
-![Screenshot 2024-10-13 225230](https://github.com/user-attachments/assets/de1e396f-7fe2-4f70-ac2c-8236f4dda7b5)
+![Screenshot 2024-10-13 225230](https://github.com/user-attachments/assets/2dfd3a0b-5056-4008-a5ed-2568719c62d1)
 - User Login Page
 
-![Screenshot 2024-10-13 225242](https://github.com/user-attachments/assets/cc74e0dd-7da1-424f-bdc4-c031e8d70279)
+![Screenshot 2024-10-13 225242](https://github.com/user-attachments/assets/8e9922cc-6f51-44d2-95bb-3d4905167ca8)
 - Admin Login Page
 
-![Screenshot 2024-10-13 225308](https://github.com/user-attachments/assets/5d3119e2-8674-4e3f-9b2d-22b9c7f29185)
+![Screenshot 2024-10-13 225308](https://github.com/user-attachments/assets/8dc17db7-2ffc-46ed-ab73-cca8554f3a49)
 - Register Page
 
+![Screenshot 2024-10-13 232021](https://github.com/user-attachments/assets/6d748984-4f11-4978-8e70-2cc780468565)
 - User Home Page
 
 ![Screenshot 2024-10-13 225341](https://github.com/user-attachments/assets/377032cc-84b2-47cb-aaeb-909037b53247)
@@ -42,7 +42,7 @@ and broadened my perspective on how technology can be applied to enhance public 
 ![Screenshot 2024-10-13 225350](https://github.com/user-attachments/assets/53a777e0-4e63-411d-9d82-8770fdd4607b)
 - Header for User Home Page
 
-
+![Screenshot 2024-10-13 232034](https://github.com/user-attachments/assets/ea14326c-8fa0-476a-b99e-27e529ca85a4)
 -  Admin Home Page
 
 ![Screenshot 2024-10-13 225427](https://github.com/user-attachments/assets/7f816392-f3fc-495b-9761-f5d487862eef)
