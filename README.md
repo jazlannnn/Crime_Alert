@@ -24,11 +24,10 @@ and broadened my perspective on how technology can be applied to enhance public 
 
 ## Screenshot of the Website
 
+User 
+
 ![Screenshot 2024-10-13 225230](https://github.com/user-attachments/assets/2dfd3a0b-5056-4008-a5ed-2568719c62d1)
 - User Login Page
-
-![Screenshot 2024-10-13 225242](https://github.com/user-attachments/assets/8e9922cc-6f51-44d2-95bb-3d4905167ca8)
-- Admin Login Page
 
 ![Screenshot 2024-10-13 225308](https://github.com/user-attachments/assets/8dc17db7-2ffc-46ed-ab73-cca8554f3a49)
 - Register Page
@@ -42,6 +41,23 @@ and broadened my perspective on how technology can be applied to enhance public 
 ![Screenshot 2024-10-13 225350](https://github.com/user-attachments/assets/53a777e0-4e63-411d-9d82-8770fdd4607b)
 - Header for User Home Page
 
+![Screenshot 2024-10-13 225450](https://github.com/user-attachments/assets/04cd10bc-2ce5-446c-b94a-7f175584d96b)
+- User Create Report Page
+
+![Screenshot 2024-10-13 225510](https://github.com/user-attachments/assets/ddb31211-55ad-468b-a058-c7bfc95e8cc6)
+-  User View Report Page
+
+![Screenshot 2024-10-13 225545](https://github.com/user-attachments/assets/de3f2c93-4cf6-44db-8c78-48453db8730e)
+- User Detail Page
+
+![Screenshot 2024-10-13 232426](https://github.com/user-attachments/assets/42618b01-57e5-46f1-98cf-129a6b039fcf)
+- User Setting Page 
+
+Admin 
+
+![Screenshot 2024-10-13 225242](https://github.com/user-attachments/assets/8e9922cc-6f51-44d2-95bb-3d4905167ca8)
+- Admin Login Page
+
 ![Screenshot 2024-10-13 232034](https://github.com/user-attachments/assets/ea14326c-8fa0-476a-b99e-27e529ca85a4)
 -  Admin Home Page
 
@@ -51,26 +67,14 @@ and broadened my perspective on how technology can be applied to enhance public 
 ![Screenshot 2024-10-13 225435](https://github.com/user-attachments/assets/cbd140d2-6068-4b6b-a089-137888a9fd75)
 - Header for Admin Home Page
 
-![Screenshot 2024-10-13 225450](https://github.com/user-attachments/assets/04cd10bc-2ce5-446c-b94a-7f175584d96b)
-- User Create Report Page
-
-![Screenshot 2024-10-13 225510](https://github.com/user-attachments/assets/ddb31211-55ad-468b-a058-c7bfc95e8cc6)
--  User View Report Page
-
 ![Screenshot 2024-10-13 225524](https://github.com/user-attachments/assets/85ab7af0-3119-4fa7-82f9-5c7e4cb5eebe)
 - Admin View Report Page
 
 ![Screenshot 2024-10-13 225531](https://github.com/user-attachments/assets/978971b2-de86-4138-b285-8b0fbb615dfb)
 - Admin Edit Report Function
 
-![Screenshot 2024-10-13 225545](https://github.com/user-attachments/assets/de3f2c93-4cf6-44db-8c78-48453db8730e)
-- User Detail Page
-
 ![Screenshot 2024-10-13 232259](https://github.com/user-attachments/assets/23bc34bb-bb95-486b-8965-1f16d9172b95)
 - Admin Detail Page
-
-![Uploading Screenshot 2024-10-13 225620.png…]()
-- User Setting Page
 
 ![Screenshot 2024-10-13 225638](https://github.com/user-attachments/assets/35e8d0e2-950d-4e78-a01e-c99fdf24b906)
 - Admin Setting Page
