@@ -1,6 +1,6 @@
 # Crime Alert Management System (CRIMELERT)
 
-In my 4th semester, my colleagues and I developed CRIMELERT, a web-based application designed to provide a platform for users to report crimes directly to the police without needing to visit a police station. 
+Project Overview: In my 4th semester of Degree, my colleagues and I developed CRIMELERT, a web-based application designed to provide a platform for users to report crimes directly to the police without needing to visit a police station. 
 The system also enables the police department to efficiently manage crime reports, track the status of investigations, and analyze crime patterns. 
 The primary goal of CRIMELERT is to enhance public safety, improve law enforcement efficiency, and promote community engagement.
 
